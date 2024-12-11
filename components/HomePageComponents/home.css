@@ -1,0 +1,144 @@
+.home {
+  background-image: url("../../public/assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.uniqueName {
+  color: #ff6e4e;
+}
+.button {
+  color: #ff6e4e;
+  border-color: #ff6e4e;
+}
+.button:hover {
+  background-color: #ff6e4e;
+  color: #ffffff;
+}
+.header {
+  background-color: #0a141f;
+}
+.headings {
+  color: #ff6e4e;
+}
+.footer {
+  background-color: #0a141f;
+}
+.navs:hover {
+  color: #ff6e4e;
+}
+.details {
+  background-color: #ff6e4e18;
+}
+.WorkWithUs {
+  background-image: url("../../public/assets/bg2.jpg");
+  background-size: cover;
+}
+
+.top {
+  background-image: url("../../public/assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card {
+  box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.757);
+}
+.imgBg {
+  background-color: #ff6e4e;
+}
+.btntext {
+  color: #ff6e4e;
+}
+
+.innercard:hover {
+  background-color: #ff6e4e;
+  color: #ffffff;
+}
+.CoreValueTextBlue{
+  color: #5bafa9;
+}
+.ContactInfoBg{
+  background-color: #ff6e4e;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+} 
+
+.navbar {
+  height: 80px;
+  background-color: #0a141f;
+  position: relative;
+}
+
+.logo {
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-elements {
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+    color: #000000;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fef7e5;
+    color: #000000;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
