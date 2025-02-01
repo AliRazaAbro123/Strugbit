@@ -141,7 +141,7 @@ function ContactForm() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full p-3 font-bold rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300 mobile:p-4"
+              className="w-full p-3 font-bold rounded-md bg-[#ff6e4e] text-white hover:bg-[#d15337] transition-all duration-300 mobile:p-4"
             >
               {loading ? "Submitting..." : "SUBMIT"}
             </button>
