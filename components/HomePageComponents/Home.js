@@ -20,7 +20,7 @@ function Home() {
         </div>
         <div className="flex justify-start w-full h-auto">
           <div className="button border-solid border rounded-md py-2 px-4 text-center tracking-wider text-lg mobile:w-[97%] mobile:py-4 mobile:text-sm mobile:font-semibold block cursor-pointer">
-            <Link href="/careers">
+            <Link href="/careers" className="block w-full">
               EXPLORE CAREERS AT STRUGBITS <code>&gt;</code>
             </Link>
           </div>

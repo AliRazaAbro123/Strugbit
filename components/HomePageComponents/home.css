@@ -106,7 +106,7 @@
 @media (max-width: 768px) {
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
-    color: #000000;
+    color: #ffffff;
   }
 }
 
@@ -120,8 +120,8 @@
     position: absolute;
     right: 0;
     top: 60px;
-    background-color: #fef7e5;
-    color: #000000;
+    background-color: #0a141f;
+    color: #ffffff;
     width: 0px;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
@@ -140,5 +140,6 @@
   .nav-elements ul li {
     margin-right: unset;
     margin-top: 22px;
+    margin-left: 20px;
   }
 }

@@ -19,14 +19,14 @@ function CareerFooter() {
             </span>
             Story?
           </h1>
-        <div className="flex flex-row items-center justify-center gap-4 mobile:flex-col">
-          <div className="px-4 py-2 text-lg tracking-wider text-center border border-solid rounded-md button mobile:px-12 mobile:py-4 mobile:text-xl">
-            <Link href="#">
+        <div className="w-auto mobile:w-full flex flex-row items-center justify-center gap-4 mobile:flex-col">
+          <div className="button border-solid border rounded-md py-2 px-4 text-center tracking-wider text-lg mobile:w-[97%] mobile:py-4 mobile:text-sm mobile:font-semibold block cursor-pointer">
+            <Link href="#" className="block w-full">
               APPLY FOR JOB<code>&gt;</code>
             </Link>
           </div>
-          <div className="block px-4 py-2 text-lg tracking-wider text-center border border-solid rounded-md cursor-pointer button tablet:w-full mobile:w-full mobile:py-4">
-              <Link href="#">
+          <div className="button border-solid border rounded-md py-2 px-4 text-center tracking-wider text-lg mobile:w-[97%] mobile:py-4 mobile:text-sm mobile:font-semibold block cursor-pointer">
+              <Link href="#" className="block w-full">
                 APPLY FOR INTERNSHIP<code>&gt;</code>
               </Link>
           </div>

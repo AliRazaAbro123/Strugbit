@@ -1,41 +1,44 @@
-// import nodemailer from "nodemailer";
-// import { NextResponse } from "next/server"; // Import NextResponse
+import nodemailer from "nodemailer";
 
-// // Named export for the POST request handler
-// export async function POST(req) {
-//   // Parse the incoming JSON request body
-//   const { username, email, message } = await req.json();
+export async function POST(req) {
+  try {
+    const body = await req.json();
+    const { username, email, message } = body;
 
-//   if (!username || !email || !message) {
-//     return NextResponse.json({ error: "All fields are required." }, { status: 400 });
-//   }
+    if (!username || !email || !message) {
+      return new Response(
+        JSON.stringify({ message: "All fields are required" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
-//   try {
-//     // Create a transporter using Gmail SMTP settings
-//     const transporter = nodemailer.createTransport({
-//       host: "smtp.gmail.com",
-//       port: 587, // Gmail's SMTP port
-//       secure: false, // Use TLS
-//       auth: {
-//         user: process.env.GMAIL_USER, // Your Gmail address (stored in .env)
-//         pass: process.env.GMAIL_PASS, // Your Gmail app password (stored in .env)
-//       },
-//     });
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER, // Your Gmail address
+        pass: process.env.EMAIL_PASS, // Your app password
+      },
+    });
 
-//     // Email options
-//     const mailOptions = {
-//       from: `"${username}" <${email}>`, // Sender address
-//       to: process.env.RECIPIENT_EMAIL, // Recipient's email address (stored in .env)
-//       subject: "New Contact Form Submission",
-//       text: `Name: ${username}\nEmail: ${email}\nMessage: ${message}`,
-//     };
+    const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_TO, // Your receiving email address
+      subject: `New message from ${username}`,
+      text: message,
+    };
 
-//     // Send the email
-//     await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions);
 
-//     return NextResponse.json({ message: "Email sent successfully!" }, { status: 200 });
-//   } catch (error) {
-//     console.error("Error sending email:", error);
-//     return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
-//   }
-// }
+    return new Response(
+      JSON.stringify({ message: "Email sent successfully!" }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (error) {
+    console.error("Error sending email:", error.message);
+
+    return new Response(
+      JSON.stringify({ message: "Failed to send email" }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  }
+}

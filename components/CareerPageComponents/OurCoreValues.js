@@ -19,7 +19,7 @@ function LifeAtStrugbits() {
             create a positive impact in our workspace and the digital world.
           </h3>
         </div>
-        <div className="flex flex-col items-center justify-center w-full h-auto gap-8 py-10 overflow-hidden">
+        <div className="flex flex-col px-1 items-center justify-center w-full h-auto gap-8 py-10 overflow-hidden">
           <div className="w-[70%] tablet:w-[80%] h-auto flex justify-center items-center gap-8 flex-row mobile:w-full mobile:flex-col">
             <CoreValueCard
               title="Drive"

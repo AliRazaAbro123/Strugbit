@@ -24,10 +24,10 @@ const JoinOurTeam = () => {
               opportunities.
             </h3>
           </div>
-          <div className="flex items-center justify-center h-auto mobile:w-full">
+          <div className="mt-4 mb-2 button border-solid border rounded-md py-2 px-4 text-center tracking-wider text-lg mobile:w-[97%] mobile:py-4 mobile:text-sm mobile:font-semibold block cursor-pointer">
             <Link
               href="/careers"
-              className="px-4 py-2 text-lg tracking-wider text-center border border-solid rounded-md cursor-pointer button mobile:py-3 mobile:text-sm mobile:font-semibold"
+              className="w-full block"
             >
               VISIT CAREERS
             </Link>

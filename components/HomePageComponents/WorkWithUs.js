@@ -73,10 +73,10 @@ function WorkWithUs() {
             </h3>
           </div>
         </div>
-        <div className="mt-4 mb-2">
+        <div className="mt-4 mb-2 button border-solid border rounded-md py-2 px-4 text-center tracking-wider text-lg mobile:w-[97%] mobile:py-4 mobile:text-sm mobile:font-semibold block cursor-pointer">
           <Link
             href="/benefits"
-            className="block w-auto h-auto px-4 py-2 text-lg tracking-wider text-center border border-solid rounded-md cursor-pointer button mobile:w-full mobile:py-3 mobile:text-sm mobile:font-semibold"
+            className="block w-full"
           >
             VIEW ALL BENEFITS <code>&gt;</code>
           </Link>
